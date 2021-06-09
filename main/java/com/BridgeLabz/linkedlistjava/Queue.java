@@ -1,34 +1,36 @@
 package com.BridgeLabz.linkedlistjava;
 
-public class Queue {
-
- /********
+/********
  * 
  * @author ANAND 
- * purpose: Creating Simple Queue
+ * purpose: Delete Queue
  *
  *********/
-		private final LinkedList myLinkedList;
+public class Queue {
 
-	    public Queue() {
-	        this.myLinkedList=new LinkedList();
-	    }
+	
+	private final LinkedList myLinkedList;
 
-	    public void enqueue(INode myNode) {
-	        myLinkedList.append(myNode);
-	    }
+	public Queue() {
+		this.myLinkedList = new LinkedList();
+	}
+	// enqueue method is used for creation
+	public void enqueue(INode myNode) {
+		myLinkedList.append(myNode);
+	}
+	// dequeue method used for deletion
+    public void dequeue() {
+        myLinkedList.pop();
+    }
 
-	    
-	    // This method will print the nodes.
-	    public void printQueue() {
-	        myLinkedList.printMyNodes();
-	    }
-	    
-	    
-	    // This method will return first value
-	    public INode peak() {
-	        return myLinkedList.head;
-	    }
-	    
+	// This method will print the nodes.
+	public void printQueue() {
+		myLinkedList.printMyNodes();
 	}
 
+	// This method will return first value
+	public INode peak() {
+		return myLinkedList.head;
+	}
+
+}
